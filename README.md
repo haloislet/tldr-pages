@@ -1,4 +1,4 @@
-# TLDR PAGES
+# TLDR PAGES ![build](https://github.com/haloislet/tldr-pages/workflows/%E6%9E%84%E5%BB%BA/badge.svg?branch=master&event=push)
 
 ## site url
 
