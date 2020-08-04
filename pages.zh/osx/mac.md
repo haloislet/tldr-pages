@@ -22,3 +22,7 @@
 
 `sudo defaults write /Library/Preferences/com.apple.windowserver.plist \
 DisplayResolutionEnabled -bool true`
+
+- 刷新 dns
+
+`sudo killall -HUP mDNSResponder && sudo dscacheutil -flushcache`
