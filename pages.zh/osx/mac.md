@@ -17,3 +17,8 @@
 - 查询公网 IP:
 
 `curl cip.cc`
+
+- 开启 HIDPI
+
+`sudo defaults write /Library/Preferences/com.apple.windowserver.plist \
+DisplayResolutionEnabled -bool true`
