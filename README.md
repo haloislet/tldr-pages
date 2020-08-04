@@ -1,4 +1,4 @@
-# TLDR PAGES ![build and publish](https://github.com/haloislet/tldr-pages/workflows/build%20and%20publish/badge.svg)
+# TLDR PAGES ![build and publish](https://github.com/haloislet/tldr-pages/workflows/build%20and%20publish/badge.svg) ![GitHub last commit](https://img.shields.io/github/last-commit/haloislet/tldr-pages.svg?style=popout)
 
 ## site url
 
