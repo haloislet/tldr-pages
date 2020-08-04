@@ -1,0 +1,29 @@
+name: 构建
+on:
+    push:
+      branches:
+        - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1.1.0
+    - name: 克隆 tldr
+      run: |
+        git clone https://github.com/tldr-pages/tldr.git
+        rsync -av ./pages.zh/ ./tldr/pages.zh/
+        cd tldr
+        yarn
+        npm run build-index
+        rm -rf `ls . | egrep -x -v  '(index.json|pages.zh)'`
+        zip -r tldr.zip ../tldr
+        mkdir zip
+        cd zip
+        mv ../tldr.zip ./
+        git init
+        git config user.name "github actions"
+        git config user.email "haloislet@gmail.com"
+        git add .
+        git commit -m "$(date '+%Y-%m-%d %H:%M:%S') update tldr.zip"
+        git push --force --quiet "https://haloislet:${{secrets.TOKEN}}@github.com/haloislet/tldr-pages.git" master:pages
