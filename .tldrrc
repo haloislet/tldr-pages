@@ -1,0 +1,13 @@
+{
+  "repository" : "https://tldr-pages.vercel.app/tldr.zip",
+  "themes": {
+    "custom": {
+      "commandName": "bold, greenBright",
+      "mainDescription": "dim",
+      "exampleDescription": "green",
+      "exampleCode": "redBright",
+      "exampleToken": "dim, red"
+    }
+  },
+  "theme": "custom"
+}
