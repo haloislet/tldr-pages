@@ -19,7 +19,7 @@ jobs:
         yarn
         npm run build-index
         rm -rf `ls . | egrep -x -v  '(index.json|pages.zh)'`
-        zip -r tldr.zip ../tldr
+        zip -r tldr.zip ./*
         mkdir zip
         cd zip
         mv ../tldr.zip ./
