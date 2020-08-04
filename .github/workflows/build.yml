@@ -18,7 +18,7 @@ jobs:
         cd tldr
         yarn
         npm run build-index
-        rm -rf `ls . | egrep -x -v  '(index.json|pages.zh)'`
+        rm -rf `ls . | egrep -x -v  '(index.json|pages.zh|pages)'`
         zip -r tldr.zip ./*
         mkdir zip
         cd zip
