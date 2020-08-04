@@ -13,7 +13,7 @@ jobs:
     - uses: actions/checkout@v1.1.0
     - name: 克隆 tldr
       run: |
-        git clone https://github.com/tldr-pages/tldr.git
+        git clone --depth=1 https://github.com/tldr-pages/tldr.git
         rsync -av ./pages.zh/ ./tldr/pages.zh/
         cd tldr
         yarn
@@ -23,7 +23,7 @@ jobs:
         mkdir zip
         cd zip
         mv ../tldr.zip ./
-        md5 tldr.zip > info.txt
+        shasum -a 256 tldr.zip > info.txt
         date >> info.txt
         git init
         git config user.name "github actions"
