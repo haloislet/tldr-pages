@@ -1,4 +1,4 @@
-name: 构建
+name: build and publish
 on:
     push:
       branches:
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1.1.0
-    - name: 克隆 tldr
+    - name: tldr pages build
       run: |
         git clone --depth=1 https://github.com/tldr-pages/tldr.git
         rsync -av ./pages.zh/ ./tldr/pages.zh/
